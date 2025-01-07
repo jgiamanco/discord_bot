@@ -9,9 +9,10 @@ import random
 import asyncio
 from openai import OpenAI
 from utils.decorators import get_server_role
+from config import Config
     
 client = OpenAI(
-    api_key='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',
+    api_key=Config.OPENAI_API_KEY,
 )
 
 class BasicCommands(commands.Cog):
