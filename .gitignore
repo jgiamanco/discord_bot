@@ -1,0 +1,6 @@
+.env
+responses.db
+mithrandir.py
+noDB_Game.py
+discord_bot.log
+__pycache__
