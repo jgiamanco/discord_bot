@@ -10,7 +10,9 @@ import asyncio
 from openai import OpenAI
 from utils.decorators import get_server_role
 from config import Config
-    
+
+print(Config.OPENAI_API_KEY)
+# Initialize the OpenAI client with the API key from the Config class
 client = OpenAI(
     api_key=Config.OPENAI_API_KEY,
 )
@@ -67,7 +69,7 @@ class BasicCommands(commands.Cog):
             user_message = message.content[len('Mithrandir '):]
             
             # Generate a response using OpenAI
-            response = self.client.chat.completions.create(
+            response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 store=True,
                 messages=[
