@@ -64,6 +64,21 @@ class BasicCommands(commands.Cog):
 
         if message.author == self.bot.user:
             return
+
+        # if message.content.startswith('Image'):
+        #     user_message = message.content[len('Image '):]
+
+        #     response = client.images.generate(
+        #         model="dall-e-3",
+        #         prompt=user_message,
+        #         size="1024x1024",
+        #         quality="standard",
+        #         n=1,
+        #     )
+
+        #     await message.channel.send(response.data[0].url)
+        # else:
+        #     await message.channel.send("Sorry my friend, I couldn't find a suitable response for your query.")
         
         if message.content.startswith('Mithrandir'):
             user_message = message.content[len('Mithrandir '):]
