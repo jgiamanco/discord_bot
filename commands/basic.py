@@ -116,7 +116,7 @@ class BasicCommands(commands.Cog):
 
         emoji_pattern = re.compile(r'\\u[\dA-Fa-f]{4}')
         
-        match = re.search(r'(\d+)([fc])', normalized_content)
+        match = re.search(r'(\d+)([fc])\b', normalized_content)
         if match:
             temp = int(match.group(1))
             unit = match.group(2)
